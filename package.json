@@ -1,5 +1,5 @@
 {
-  "name": "stock-price-frontend",
+  "name": "group7work",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -18,6 +18,9 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "angular-highcharts": "^12.0.0",
+    "highcharts": "^9.2.2",
+    "ng-zorro-antd": "^12.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "StockPriceFrontend": {
+    "group7work": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,17 +17,24 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/StockPriceFrontend",
+            "outputPath": "dist/group7work",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/theme.less",
+              "src/styles.css",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
             "scripts": []
           },
@@ -68,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "StockPriceFrontend:build:production"
+              "browserTarget": "group7work:build:production"
             },
             "development": {
-              "browserTarget": "StockPriceFrontend:build:development"
+              "browserTarget": "group7work:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "StockPriceFrontend:build"
+            "browserTarget": "group7work:build"
           }
         },
         "test": {
@@ -102,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "StockPriceFrontend"
+  "defaultProject": "group7work"
 }
